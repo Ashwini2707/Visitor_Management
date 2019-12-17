@@ -1,0 +1,23 @@
+<!-- <div  style="float:left">
+    <input class="form-control " type="text" placeholder="Search">
+    <button class="btn-success" type="submit">Search</button>
+</div> -->
+<p><b>All Managers </b></p>
+
+<div class="container ">
+        <table class="table-secondary table-striped shadow-lg" border="2">
+        <tr >
+            <th>Phone</th>
+            <th>Managersname</th>
+            <th>Managerstype</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let managers of allManagers" >
+            <td  *ngIf="managers.usertype=='manager'">{{managers.phone}}</td>
+            <td *ngIf="managers.usertype=='manager'">{{managers.username}}</td>
+            <td *ngIf="managers.usertype=='manager'" >{{managers.usertype}}</td>
+            <td *ngIf="(managers.usertype=='pending')&& (managers.usertype=='manager')"><button class="btn-info">pending</button></td>
+             <td *ngIf="( managers.usertype!='pending')&& (managers.usertype=='manager')">approved</td> 
+        </tr>
+       </table><br><br>
+</div>

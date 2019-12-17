@@ -1,0 +1,8 @@
+<div class="container ">
+        <li *ngFor="let v of myvisitors;let i=index"  >
+        {{v.visitorName}}&nbsp;&nbsp;&nbsp;
+        
+        <button (click)="del(i)" >Delete</button>
+        <button>Undo</button>       
+        </li>
+</div>

@@ -1,0 +1,30 @@
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+   <!-- Brand/logo -->
+   <a class="navbar-brand" ><i class='far fa-building' style='font-size:48px;color:white'></i></a>
+   
+   <!-- Links -->
+   <ul class="navbar-nav">
+         <li class="nav-item">
+               <h4 >Tenant / Owner Dashboard</h4>
+         </li>
+     <li class="nav-item">
+       <button class="btn btn-primary" (click)="lout()" id="h4">Logout</button>
+     </li>
+     
+   </ul>
+ </nav>
+
+<div [formGroup]="visitorForm" class="container jumbotron"  id="d1">
+        <b>Visitor Name:</b><br><input class="form-control" type="text" formControlName="visitorName"><br>
+        <b>Visitor ID:</b><br><input class="form-control" type="text"  formControlName="visitorid"><br>
+        <b>Visitor Mobile:</b><br><input class="form-control" type="text"  formControlName="visitorMobile"><br>
+        <b>Visitor Vehicle:</b><br><input class="form-control" type="text"  formControlName="visitorVehicle"><br>
+        <b>Visitor FlatNumber:</b><br><input class="form-control" type="text"  formControlName="flatNumber"><br>
+        <b>Visiting Date:</b><br><input class="form-control" type="date" formControlName="visitordate"><br>
+   <div id="d3"> <button  class="btn btn-primary" (click)="visitBooking()">Book Visit</button></div>
+ </div>
+ <div id="d2">
+    <app-myvisitors></app-myvisitors>
+ </div>

@@ -1,0 +1,21 @@
+<p><b>All Users </b></p>
+<div class="container ">
+    <table class="table-secondary table-striped shadow-lg" border="2">
+        <tr >
+            <th>Phone</th>
+            <th>Username</th>
+            <th>Usertype</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let user of allUsers" >
+            <td *ngIf="(user.usertype=='user')">{{user.phone}}</td>
+            <td *ngIf="(user.usertype=='user')">{{user.username}}</td>
+            <td *ngIf="(user.usertype=='user')" >{{user.usertype}}</td>
+            <td *ngIf=" (user.usertype=='pending')&&(user.usertype=='user')"><button class="btn-info">pending</button></td>
+            <td *ngIf=" (user.usertype!='pending')&&(user.usertype=='user')">approved</td> 
+            <td *ngIf="(user.usertype=='user')"><button class="btn-danger" (click)="delUser(user)">Delete</button></td> 
+
+        </tr>
+    </table><br><br>
+</div>

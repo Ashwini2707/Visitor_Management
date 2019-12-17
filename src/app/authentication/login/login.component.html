@@ -1,0 +1,10 @@
+<div class="container"  >
+    <div id="div">
+        <a routerLink="register">New User!! Register Here</a><br><br>
+        <div [formGroup]="loginForm">
+            <input type="text" formControlName="phone" placeholder="Phone"><br><br>
+            <input type="text" formControlName="password" placeholder="Password"><br><br>
+            <button class="btn btn-primary" [disabled]="!loginForm.valid" (click)="login()">Login</button><br><br>
+        </div>
+    </div>
+</div>

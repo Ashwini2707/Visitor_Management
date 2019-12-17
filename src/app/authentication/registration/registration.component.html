@@ -1,0 +1,16 @@
+<div class="container"  > 
+   <div id="div" [formGroup]="regForm"><br><br>
+        <input type="text" placeholder="username" formControlName="username"><br>
+       
+        <br>
+        <input type="text" placeholder="password" formControlName="password"><br><br>
+        <input type="text" placeholder="phone" formControlName="phone"><br>
+        <span>
+            <i class="fa fa-check-square" style="color:green" *ngIf="(regForm.controls.phone.valid)&&(regForm.controls.phone.dirty)"></i>
+            <i class="fa fa-times-circle" style="color:red" *ngIf="regForm.controls.phone.invalid"></i>
+            phone should be 10 characters
+            
+        </span><br><br>
+        <button class="btn btn-primary" [disabled]="!regForm.valid" (click)="register()">Register</button><br><br>
+    </div>
+</div>

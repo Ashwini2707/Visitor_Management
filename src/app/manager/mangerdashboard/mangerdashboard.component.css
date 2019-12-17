@@ -1,0 +1,21 @@
+table tr td{
+    padding:15px;
+}
+div table{
+    margin-top: 20px;
+    margin-left: 100px;
+    text-align: center;
+    
+}
+p{
+    text-align: center;
+}
+h4{
+    text-align: center;
+    margin-left:480px;
+    color:white;
+ }
+
+ #h4{
+   margin-left:500px;
+ }

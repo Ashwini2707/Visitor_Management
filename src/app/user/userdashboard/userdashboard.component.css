@@ -1,0 +1,40 @@
+#d1{
+    padding:30px;
+    float: left;
+    width: 43%;
+    margin-left: 55px;
+    margin-top: 50px;
+    color: white;
+    border-radius: 10px;
+ }
+ #d2{
+    padding: 30px;
+    float: right;
+    width: 43%;
+    margin-right: 40px;
+    background-color:rgba(233, 169, 169, 0.8);
+    color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+ }
+ .jumbotron{
+    background-color:rgba(231, 139, 139, 0.8);
+ }
+ #d3{
+    padding: 20px
+ } 
+ div:hover{
+    opacity:1;
+    box-shadow: 10px 10px 20px 10px grey;
+ }
+ h4{
+    text-align: center;
+    margin-left:300px;
+    color:white;
+ }
+
+ #h4{
+   margin-left:500px;
+ }
+
+ 

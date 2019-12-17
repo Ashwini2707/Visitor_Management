@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+     
+        <a class="navbar-brand" ><i class='far fa-building' style='font-size:48px;color:white'></i></a>
+
+        <ul class="navbar-nav">
+              <li class="nav-item">
+                    <h4 >Visitors list</h4>
+              </li>
+          <li class="nav-item">
+            <button class="btn btn-primary" (click)="lout()" id="h4">Logout</button>
+          </li>
+          
+        </ul>
+      </nav>
+
+<div class="container ">
+    <table class="table-secondary table-striped shadow-lg" border="2">
+        <tr>
+            <th>Visitor Name</th>
+            <th>visitor Date</th>
+            <th>visitorid</th>
+            <th>Vehicle Number</th>
+            <th>Mobile </th>
+            <th>Flat</th>
+            <th>Approve Visit</th>
+            <th>Visited</th>
+        </tr>
+        <tr *ngFor="let visit of visits | showpipe:searchKey">
+            <td> {{visit.visitorName}}</td>
+            <td>{{visit.visitordate}}</td>
+            <td>{{visit.visitorid}}</td>
+            <td>{{visit.visitorVehicle}}</td>
+            <td>{{visit.visitorMobile}}</td>
+            <td>{{visit.flatNumber}}</td>
+            <td> <button class="btn btn-info" (click)="visited(visit)" *ngIf="visit.status!='done'">Approve Visit</button></td>
+            <td><button class="btn btn-primary" class="" *ngIf="visit.status=='done'" [disabled]="true">Visited</button></td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+

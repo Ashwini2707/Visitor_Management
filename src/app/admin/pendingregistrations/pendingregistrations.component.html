@@ -1,0 +1,22 @@
+<div class="container ">
+  
+    <p><b>Pending Registrations</b></p>
+    <table  class="table-secondary table-striped shadow-lg" border="2">
+        <tr>
+            <td> User name</td>
+            <td>Phone</td>
+            <td> Approve </td>
+             <td>Approve as manager</td>
+        </tr>          
+
+
+        <tr *ngFor="let user of pendingUsers">
+            <td> {{user.username}}</td>
+            <td>{{user.phone}}</td>
+            <td>  <button class="btn btn-info" (click)="approve(user,'user')">Approve as user</button></td>
+            <td>  <button class="btn btn-primary"  (click)="approve(user,'manager')">Approve as manager</button></td>
+        </tr>
+    </table>
+</div>
+
+
